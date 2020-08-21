@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Wrangle and analyze data: @dog_rates twitter account study case</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://example.org/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://example.org/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://example.org/css/owl.carousel.css">
+<link rel="stylesheet" href="https://example.org/css/owl.theme.css">
+
+
+  <link href="https://example.org/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://example.org/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://example.org/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://example.org/">Data analyst portfolio</a></h1>
+    
+      <p class="sidebar-p">I am a junior Data Analyst, ready to make our projects reall.</p>
+    
+      <p class="sidebar-p">Originally from Rabat, currently based in Salé, Morocco.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://example.org/portfolio/">Home</a></li>
+      
+        <li><a href="https://example.org/about/">About</a></li>
+      
+        <li><a href="https://example.org/contact/">Get in touch</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:pxotman@gmail@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/pxotmane" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2016 Otmane DAOU |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://example.org/">Data analyst portfolio</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Wrangle and analyze data: @dog_rates twitter account study case</h1>
+         <p>This project is part of my Udacity Data Analyst Nanodegree certification. It about data wrangling process and analyzing the cleaned data.</p>
+<h3 id="introduction">Introduction</h3>
+<p>In the real world the data is rarely clean and has been collected from different resources. For this reason it is obvious, before going to the analysis stage and withdrawing conclusions, to do a data cleaning. Mastering data cleaning tools is very important for every data analyst because it allows to draw the desired conclusions while minimizing the risk of erroneous results.</p>
+<p>The data wrangled is from tweet database of Twitter account @dog_rates, also known as WeRateDogs. This dataset is about the humorous comment and rating of dogs in the @dog_rates account. This account is for rating dogs with a humorous comment about the dogs. The rating denominator is 10 and the numerator is more than 10 (14, 12, 17…), the idea for this numerator values that the dogs deserve a rating more than 10, this theory is resumed on this quote: “they’re good dogs Brent”.</p>
+<h3 id="technologies-used">Technologies Used</h3>
+<ul>
+<li>Python, Numpy, Pandas, Matplotlib, Seaborn, Requests, Tweepy, Json</li>
+<li>LaTex</li>
+<li>Jupyter Notebook</li>
+</ul>
+<h3 id="wrangling-process">Wrangling process</h3>
+<p>The data wrangling process goes through 3 major steps: Gathering data, assessing data, cleaning data</p>
+<h4 id="gathering-data">Gathering data</h4>
+<p>The data of this project are gathered from three sources as following:</p>
+<ul>
+<li>Twitter archive enhanced: it’s a given data set by the Udacity Data Analyst Nanodegree instructors, this data set is the backbone of this project;</li>
+<li>Image predictions: I must gather data from a TSV file hosted in web server, I got the data by using the request python package to a TSV dataset to can read and analysis the data;</li>
+<li>Twitter API &amp; JSON: the expected is gathering data from Twitter database by using the Tweepy library.</li>
+</ul>
+<h4 id="assessing-data">Assessing data</h4>
+<p>After creating three data frame from the gathering data (twitter-archive-enhanced data frame, retweet_count data frame, predict data frame), I explore the data frames to found the issues in each data frame. I perform a visual assessing and programmatically assessing to looking missing values issues, quality issues and tidiness issues (The details of all issues found you find them in the wrangling_report file).</p>
+<h4 id="cleaning-data">Cleaning data</h4>
+<p>In this step, I tried to solve all issues found in the assessing step. The cleaning of each issue is performing on three steps: define, code and
+test.<!-- raw HTML omitted -->
+Before starting the cleaning process, I make a copy of each table to avoid losing or changing the gathered data by mistake.
+For the missed values issues detected after the visualization assessing, I tried to extract more values for numerator and denominator ratings. Then, the more important quality problems that needed more work are cleaning the abnormal values of numerator rating and get the year, month also day in Twitter‐archive‐enhanced table.<!-- raw HTML omitted -->
+On the other hand, in the Predict table the most complicate quality issues are get just the right predict with high percentage prediction, also extract the dog images names. Beside this complicated issues, I performed some formatting tasks like capital letters, type of columns, deleting useless columns…
+Thereafter, they are two tidiness issues in this project; I merged all three tables in one table after melting the dog stages columns on one column. This two cleaning steps are for facilitation the analysis process after.<!-- raw HTML omitted -->
+I debriefed 20 issues in this project but did not mean the final table is free of issues; the wrangling data is an iterative process in future needing data analysis process.
+The final twitter_archive_master table contain 2223 observations with 13 columns, point out same columns had not the same number of observations but not mean are a NaN observations.</p>
+<h3 id="insights">Insights</h3>
+<h4 id="insight-one-the-most-popular-dog-breed">Insight one: the most popular dog breed</h4>
+<p><img src="/img/portfolio/popular_breed.png" alt=""></p>
+<p>After analyzing 2223 observations got from the wrangled data process and plotting it, I notice that the Golden retriever dog breed is the popular dog breed inside the WeRateDogs community by 162 tweets.</p>
+<h4 id="insight-two-the-dog-breed-get-the-most-high-retweet">Insight two: the dog breed get the most high retweet</h4>
+<p><img src="/img/portfolio/high_retweet_breed.png" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted -->
+Performing a mean calculation for 10 high‐retweeted dog breeds, I got that the Standard poodie dog breed is the most retweeted with an average of 7563.67 retweet followed by the Bedington terrier dog breed by 7299.50 retweet. Which is not the same as the first insight.</p>
+<h4 id="insight-three-the-dog-breed-get-the-most-high-favorite-counting">Insight three: the dog breed get the most high favorite counting</h4>
+<p><img src="/img/portfolio/high_favorite_breed.png" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted -->
+For this insight, I got that the Black‐and‐tan coongound dog breed is most favorite for the most favorite for WeRateDogs twitter account visitors with an average 31161.00 favorite signs followed by the Bedington terrier dog breed with 22942.17 as an average.<!-- raw HTML omitted -->
+This third insight is not almost in the same way as the second insight where Standard poodie dog breed in the second place as most retweeted dog breed. This relationship between can be verified in the followed insight.</p>
+<h4 id="insight-four-the-correlation-between-favorite-count-and-retweet-count-for-dog-breeds">Insight four: the correlation between favorite count and retweet count for dog breeds</h4>
+<p><img src="/img/portfolio/retweet_favorite_correlation.png" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted -->
+To improve this insight I reuse the favorite mean and retweet mean for each dog breed, after plotting this two variables by using scatter plot, I can notice that the favorite count and retweet are positively correlated in almost observations. Which appear logic for this kind of relationship.</p>
+<h4 id="insight-five-the-most-used-rating-for-all-tweets">Insight five: the most used rating for all tweets</h4>
+<p><img src="/img/portfolio/most_used_rate.png" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted -->
+For 2223 visitors WeRateDogs Twitter account use rating numerator equal or more than 10 (541 for 12, 446 for 11, 437 for 10, 344 for 13). This notice improve that the visitors accept this humorous principle of rating.</p>
+<h4 id="insight-six-variation-of-tweet_id-count-favorit_count-retweet_count-values-during-the-year">Insight six: Variation of tweet_id count, favorit_count, retweet_count values during the year</h4>
+<p><img src="/img/portfolio/variation_month.png" alt=""><!-- raw HTML omitted --><!-- raw HTML omitted -->
+By using line chart to plotting favorite average and retweet average during the year (x axis) also adding bar chart for tweet count on same axis, I notice that the three variables don’t follow the same variation.<!-- raw HTML omitted -->
+As we can observe the number of tweets increase in November and December but the favorite and retweet average decrease, which is antithesis for other months where the number of tweets decrease.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>Even a dog breed is very popular for the most tweeters don’t mean is the most favorited or retweeted by other users. The selection of a preferable dog breed is up to others criteria, which need a depth analysis with more variables.<!-- raw HTML omitted -->
+In other side, the increase of tweets number do not mean the increase of the visitors reaction for the tweeted dog breed. It can be explained by confusion of visitors for choosing the preferable dog breed when the number of tweets increase or the rate of dog breed tweets increasing is greater than the rate of favorite and retweet average increasing.<!-- raw HTML omitted -->
+Finally, the originality of humorist rating is what almost visitors prefer for rating the dogs, which mean is the asset of this twitter account.</p>
+<p><a href="https://github.com/pxotmane/Wrangle-and-Analyze-Data">Link to the project repository in GitHub</a></p>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://example.org/js/jquery.min.js"></script>
+<script src="https://example.org/js/bootstrap.min.js"></script>
+<script src="https://example.org/js/jquery.cookie.js"> </script>
+<script src="https://example.org/js/ekko-lightbox.js"></script>
+<script src="https://example.org/js/jquery.scrollTo.min.js"></script>
+<script src="https://example.org/js/masonry.pkgd.min.js"></script>
+<script src="https://example.org/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://example.org/js/owl.carousel.min.js"></script>
+<script src="https://example.org/js/front.js"></script>
+
+
+
+</body>
+</html>

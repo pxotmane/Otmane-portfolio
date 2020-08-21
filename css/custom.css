@@ -1,0 +1,14 @@
+/* your styles go here */
+
+body {
+    text-align: justify;
+}
+
+.content-column-content p, .content-column-content li{
+	text-align: justify
+}
+
+
+.img-responsive {
+    max-width: 100%;
+}

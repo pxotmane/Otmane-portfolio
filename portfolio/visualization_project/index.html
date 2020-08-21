@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Visualization data and telling story: Ford GoBike (Lyft) System Data study case</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://example.org/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://example.org/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://example.org/css/owl.carousel.css">
+<link rel="stylesheet" href="https://example.org/css/owl.theme.css">
+
+
+  <link href="https://example.org/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://example.org/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://example.org/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://example.org/">Data analyst portfolio</a></h1>
+    
+      <p class="sidebar-p">I am a junior Data Analyst, ready to make our projects reall.</p>
+    
+      <p class="sidebar-p">Originally from Rabat, currently based in Salé, Morocco.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="https://example.org/portfolio/">Home</a></li>
+      
+        <li><a href="https://example.org/about/">About</a></li>
+      
+        <li><a href="https://example.org/contact/">Get in touch</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:pxotman@gmail@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/pxotmane" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2016 Otmane DAOU |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://example.org/">Data analyst portfolio</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Visualization data and telling story: Ford GoBike (Lyft) System Data study case</h1>
+         <p>This project is part of my Udacity Data Analyst Nanodegree certification. It about data visualization process and telling story.</p>
+<h3 id="introduction">Introduction</h3>
+<p>This project is about Bay Wheels (called also Ford GoBike after a partnership with Ford Motor Company) routes for public use data set. Bay Wheels is a regional public bicycle sharing system in the San Francisco Bay Area, California. It&rsquo;s owned by Lyft, the system is expected to expand to 7,000 bicycles around 540 stations in San Francisco, Oakland, Berkeley, Emeryville, and San Jose.</p>
+<h3 id="technologies-used">Technologies Used</h3>
+<ul>
+<li>Python, Numpy, Pandas, Matplotlib, Seaborn</li>
+<li>LaTex</li>
+<li>Jupyter Notebook</li>
+</ul>
+<h3 id="the-structure-of-dataset">The structure of dataset</h3>
+<p>This dataset contain 519700 observations and 13 features.</p>
+<p>4 columns are integer(duration_sec, start_station_id, end_station_id, bike_id).</p>
+<p>5 columns are object where start_time and end_time are timestamp, while that start_station_name, end_station_name, user_type are string.</p>
+<p>4 columns are float (start_station_latitude, start_station_longitude, end_station_latitude, end_station_longitude).</p>
+<p>I convert duration_sec to time readable format and I calculate the distance tracks from latitude and londitude columns. Also I extract the year, month and day from start_time column. Which mean I added 5 other columns to my dataset.</p>
+<p>Also I&rsquo;ve eliminated outlier values from all data frame columns. This reduces the number of observations to 357900 instead of 519700.</p>
+<h3 id="the-main-feature-of-interest-in-dataset">The main feature of interest in dataset</h3>
+<p>I am interested in this new concept of renting bikes, I want analysis the time and distance traveled by each consumer and know which type of consumers is more  useable of Lyft services.</p>
+<h3 id="the-features-in-the-dataset-help-support-myinvestigation-into-my-features-of-interest">The features in the dataset help support myinvestigation into my feature(s) of interest</h3>
+<p>There are two types of bike users (Customer, Subscriber) I want to know which one uses the bikes more and for how long, thus the top 10 most popular start and finish stations in the city.</p>
+<h3 id="univariate-exploration">Univariate Exploration</h3>
+<h4 id="the-percentage-of-each-user-type">The percentage of each user type</h4>
+<p><img src="/img/portfolio/output_27_0.png" alt="png"></p>
+<p>We can notice that the majority of Lyft vélo service users are subscribers (83.7%) and consumers (16.3%). This means that most users of Lyft services are subscribers.</p>
+<h4 id="the-distribution-of-duration_sec">The Distribution of duration_sec</h4>
+<p><img src="/img/portfolio/output_31_0.png" alt="png"></p>
+<p>We can notice that the distribution of duration_sec is right skew, this mean that the majority of users use the Lyft services under the mean duration which is 648.18 seconds.</p>
+<h4 id="the-distribution-of-hire_time">The Distribution of hire_time</h4>
+<p><img src="/img/portfolio/output_34_0.png" alt="png"></p>
+<p>As we can see the distribution of users use the LYFT service time is right skewed distribution, which mean that the majority use the bikes for short duration under 1 hour. Which confirm the same result as before</p>
+<h4 id="the-distribution-of-distance-traveled">The Distribution of distance traveled</h4>
+<p><img src="/img/portfolio/output_37_0.png" alt="png"></p>
+<p>According to this histogram we can see that the users of LYFT Services use the bikes for short distances that do not exceed 5 km in the majority of cases.</p>
+<h4 id="the-distribution-of-distance-cumulation">The Distribution of distance cumulation</h4>
+<p><img src="/img/portfolio/output_44_0.png" alt="png"></p>
+<p>After summing up the distances from the same starting point and different arrival points, I found that the majority of the distances covered are less than 20 km. This gives another indication of the short distances travelled by users.</p>
+<h4 id="the-counting-of-months-in-dataset">The counting of months in dataset</h4>
+<p><img src="/img/portfolio/output_47_0.png" alt="png"></p>
+<p>Even the data collection starts in June, we can notice the optimum is reached in October and starts to decrease in November and December. it is probably caused by the beginning of the winter season.</p>
+<p>The distrubtion of the variables is right skewed distributed and give an idea how the users use the Lyft services for short duration and distance in majority of cases. Also, before I start plotting, I droped the outlier values to eliminate the outlier effect.
+<!-- raw HTML omitted -->
+In my case I convert some columns to readable and useful format of data, like date, time and distance. For distance altitude and longitude columns become useless after calculating distance.</p>
+<h3 id="bivariate-exploration">Bivariate Exploration</h3>
+<h4 id="the-duration-sum-for-each-user-type">The duration sum for each user type</h4>
+<p><img src="/img/portfolio/output_49_0.png" alt="png"></p>
+<p>As we can see they are a huge gape between using time of Subscribers and Customers, it&rsquo;s can be 3 times the using duration sum of Customers.</p>
+<h4 id="the-distance-sum-for-each-user-type">The distance sum for each user type</h4>
+<p><img src="/img/portfolio/output_52_0.png" alt="png"></p>
+<p>As we noticed for using time sum in chart above, is the same case for using distance sum, they are a huge gape between using distance of Subscribers and Customers, it&rsquo;s can be 4 times the using duration sum of Customers.</p>
+<h4 id="statistical-reporting-for-each-consumers-by-distance">Statistical reporting for each consumers by distance</h4>
+<p><img src="/img/portfolio/output_57_0.png" alt="png"></p>
+<p>As we can see the Customers have a large variation of distance values than the Subscribers, in other hand the Subscribers have more outlier values than Customers.</p>
+<h4 id="statistical-reporting-for-each-consumers-by-duration_sec">Statistical reporting for each consumers by duration_sec</h4>
+<p><img src="/img/portfolio/output_59_0.png" alt="png"></p>
+<p>As we can see the Customers have a large variation of duration_sec values than the Subscribers, in other hand the Subscribers have more outlier values than Customers.</p>
+<p>N.B:  simplify the comparison and the analysis of the results, I planned to create bins for distance, hire time and duration_sec. These bins are based on quartiles to get equal bins.</p>
+<h4 id="the-distance-traveled-for-each-time-quartile-bin">The distance traveled for each time quartile bin</h4>
+<p><img src="/img/portfolio/output_64_1.png" alt="png"></p>
+<p>As we can see the number of users who use the Lyft bikes for long time traveling more distance, but they are many users who use Lyft bikes for long period but didn&rsquo;t use it for long distance.</p>
+<h4 id="the-duration-passed-for-each-distance-quartile-bin">The duration passed for each distance quartile bin</h4>
+<p><img src="/img/portfolio/output_67_1.png" alt="png"></p>
+<p>As we can see they are many number of users who use the Lyft bikes for short distance traveling but use the bikes for long time. Also they are many users who use Lyft bikes for long distance but didn&rsquo;t use it for long time.</p>
+<h4 id="distribution-of-using-lyft-services-by-time-and-distance-in-months-and-week-days">Distribution of using Lyft services by time and distance in months and week days</h4>
+<p><img src="/img/portfolio/output_69_1.png" alt="png"></p>
+<p><img src="/img/portfolio/output_70_0.png" alt="png"></p>
+<p>There is no change in the behavior of Lyft bike service users in terms of time and distance of use throughout the months. There is a general tendency to use the service for short and medium duration and the same for distance. Note also that the use intensified in the month of October after an increase during the previous 4 months.</p>
+<p>Firstly, I wanted to know the use of Lyft bike service for each type of consumer, I found that Suscribers use these services more for long duration and long distance.</p>
+<p>Secondly, I found that the time of use and distances travelled are very varied for Customer consumers more than Subscriber consumers.</p>
+<p>Thirdly, I noticed that many of both types of users use Lyft&rsquo;s services to rent bikes for a long period of time but do not use them for long distance, also I noticed that many users ride long distances but for a short period of time, so it is important to know which type of users do so.</p>
+<p>Concerning the distribution of use of Lyfts vélo services all along the months concerned in this dataset, the same logic of use in terms of time and distance remains valid.
+<!-- raw HTML omitted --></p>
+<h3 id="multivariate-exploration">Multivariate Exploration</h3>
+<h4 id="the-average-of-distance-traveled-in-each-time-quartile-bin-for-type-users">The average of distance traveled in each time quartile bin for type users</h4>
+<p><img src="/img/portfolio/output_75_0.png" alt="png"></p>
+<p>Subscribe consumers use the Lyft vélo services for a longer average distance and for a longer period of time than Customer consumers, which is in line with the results of the bivariate analysis.</p>
+<h4 id="the-average-of-duration-passed-in-each-distance-quartile-bin-for-type-users">The average of duration passed in each distance quartile bin for type users</h4>
+<p><img src="/img/portfolio/output_78_0.png" alt="png"></p>
+<p>We can notice that the Customer Consumers use the Lyft vélo services for a higher average duration and for a longer distance than the Subscriber Consumers.  This shows that Customer consumers use Lyft vélo services more efficiently and effectively than Subscriber consumers.</p>
+<h4 id="comparison-between-the-average-of-duration-of-each-user-type-by-distance">Comparison between the average of duration of each user type by distance</h4>
+<p><img src="/img/portfolio/output_81_2.png" alt="png"></p>
+<p>As we have seen above, we notice in the line chart that Costumer consumers use the Lyft vélo service for a higher average duration than Subscriber consumers.</p>
+<p>In multi-variable visualization I found that Customers use Lyft bikes for a higher average time than Subscribers for long distances, which even shows that the number of Subscriber Consumers is higher than the number of Customer Consumers, but the latter use the bicycles for a higher average duration.</p>
+<p>The relationship noted above appeared difficult to in Univariate and Bivariate visualization, given that it is normal is a duration of use of Lyft bicycles services must be higher among Subscribers than Customers.</p>
+<h3 id="key-findings">Key findings</h3>
+<p>It is normal that a duration of use of Lyft bicycles services must be higher among Subscribers than Customers. But in our studies we find that the duration average for Customer users is more than Subscribers users.</p>
+<p>This generates results that pushes the company to review its marketing policy, maybe can encourage Customers users with new offers for traveling long distances and more time.</p>
+<p><a href="https://github.com/pxotmane/Lyft-Data-Visualization">Link to the project repository in GitHub</a></p>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://example.org/js/jquery.min.js"></script>
+<script src="https://example.org/js/bootstrap.min.js"></script>
+<script src="https://example.org/js/jquery.cookie.js"> </script>
+<script src="https://example.org/js/ekko-lightbox.js"></script>
+<script src="https://example.org/js/jquery.scrollTo.min.js"></script>
+<script src="https://example.org/js/masonry.pkgd.min.js"></script>
+<script src="https://example.org/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://example.org/js/owl.carousel.min.js"></script>
+<script src="https://example.org/js/front.js"></script>
+
+
+
+</body>
+</html>
