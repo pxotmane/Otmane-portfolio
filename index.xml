@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data analyst portfolio</title>
-    <link>https://example.org/</link>
+    <link>https://pxotmane.github.io/Otmane-portfolio/</link>
     <description>Recent content on Data analyst portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pxotmane.github.io/Otmane-portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Application of A/B testing on an E-commerce website</title>
-      <link>https://example.org/portfolio/ab_testing/</link>
+      <link>https://pxotmane.github.io/Otmane-portfolio/portfolio/ab_testing/</link>
       <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/portfolio/ab_testing/</guid>
+      <guid>https://pxotmane.github.io/Otmane-portfolio/portfolio/ab_testing/</guid>
       <description>&lt;p&gt;This project is part of my Udacity Data Analyst Nanodegree certification. It deals with the A/B Testing statistical analysis method.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Wrangle and analyze data: @dog_rates twitter account study case</title>
-      <link>https://example.org/portfolio/wrangle_analyze/</link>
+      <link>https://pxotmane.github.io/Otmane-portfolio/portfolio/wrangle_analyze/</link>
       <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/portfolio/wrangle_analyze/</guid>
+      <guid>https://pxotmane.github.io/Otmane-portfolio/portfolio/wrangle_analyze/</guid>
       <description>&lt;p&gt;This project is part of my Udacity Data Analyst Nanodegree certification. It about data wrangling process and analyzing the cleaned data.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Visualization data and telling story: Ford GoBike (Lyft) System Data study case</title>
-      <link>https://example.org/portfolio/visualization_project/</link>
+      <link>https://pxotmane.github.io/Otmane-portfolio/portfolio/visualization_project/</link>
       <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/portfolio/visualization_project/</guid>
+      <guid>https://pxotmane.github.io/Otmane-portfolio/portfolio/visualization_project/</guid>
       <description>&lt;p&gt;This project is part of my Udacity Data Analyst Nanodegree certification. It about data visualization process and telling story.&lt;/p&gt;</description>
     </item>
     
