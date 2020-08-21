@@ -121,49 +121,49 @@
 <p>There are two types of bike users (Customer, Subscriber) I want to know which one uses the bikes more and for how long, thus the top 10 most popular start and finish stations in the city.</p>
 <h3 id="univariate-exploration">Univariate Exploration</h3>
 <h4 id="the-percentage-of-each-user-type">The percentage of each user type</h4>
-<p><img src="/img/portfolio/output_27_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_27_0.png" alt="png"></p>
 <p>We can notice that the majority of Lyft vélo service users are subscribers (83.7%) and consumers (16.3%). This means that most users of Lyft services are subscribers.</p>
 <h4 id="the-distribution-of-duration_sec">The Distribution of duration_sec</h4>
-<p><img src="/img/portfolio/output_31_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_31_0.png" alt="png"></p>
 <p>We can notice that the distribution of duration_sec is right skew, this mean that the majority of users use the Lyft services under the mean duration which is 648.18 seconds.</p>
 <h4 id="the-distribution-of-hire_time">The Distribution of hire_time</h4>
-<p><img src="/img/portfolio/output_34_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_34_0.png" alt="png"></p>
 <p>As we can see the distribution of users use the LYFT service time is right skewed distribution, which mean that the majority use the bikes for short duration under 1 hour. Which confirm the same result as before</p>
 <h4 id="the-distribution-of-distance-traveled">The Distribution of distance traveled</h4>
-<p><img src="/img/portfolio/output_37_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_37_0.png" alt="png"></p>
 <p>According to this histogram we can see that the users of LYFT Services use the bikes for short distances that do not exceed 5 km in the majority of cases.</p>
 <h4 id="the-distribution-of-distance-cumulation">The Distribution of distance cumulation</h4>
-<p><img src="/img/portfolio/output_44_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_44_0.png" alt="png"></p>
 <p>After summing up the distances from the same starting point and different arrival points, I found that the majority of the distances covered are less than 20 km. This gives another indication of the short distances travelled by users.</p>
 <h4 id="the-counting-of-months-in-dataset">The counting of months in dataset</h4>
-<p><img src="/img/portfolio/output_47_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_47_0.png" alt="png"></p>
 <p>Even the data collection starts in June, we can notice the optimum is reached in October and starts to decrease in November and December. it is probably caused by the beginning of the winter season.</p>
 <p>The distrubtion of the variables is right skewed distributed and give an idea how the users use the Lyft services for short duration and distance in majority of cases. Also, before I start plotting, I droped the outlier values to eliminate the outlier effect.
 <!-- raw HTML omitted -->
 In my case I convert some columns to readable and useful format of data, like date, time and distance. For distance altitude and longitude columns become useless after calculating distance.</p>
 <h3 id="bivariate-exploration">Bivariate Exploration</h3>
 <h4 id="the-duration-sum-for-each-user-type">The duration sum for each user type</h4>
-<p><img src="/img/portfolio/output_49_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_49_0.png" alt="png"></p>
 <p>As we can see they are a huge gape between using time of Subscribers and Customers, it&rsquo;s can be 3 times the using duration sum of Customers.</p>
 <h4 id="the-distance-sum-for-each-user-type">The distance sum for each user type</h4>
-<p><img src="/img/portfolio/output_52_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_52_0.png" alt="png"></p>
 <p>As we noticed for using time sum in chart above, is the same case for using distance sum, they are a huge gape between using distance of Subscribers and Customers, it&rsquo;s can be 4 times the using duration sum of Customers.</p>
 <h4 id="statistical-reporting-for-each-consumers-by-distance">Statistical reporting for each consumers by distance</h4>
-<p><img src="/img/portfolio/output_57_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_57_0.png" alt="png"></p>
 <p>As we can see the Customers have a large variation of distance values than the Subscribers, in other hand the Subscribers have more outlier values than Customers.</p>
 <h4 id="statistical-reporting-for-each-consumers-by-duration_sec">Statistical reporting for each consumers by duration_sec</h4>
-<p><img src="/img/portfolio/output_59_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_59_0.png" alt="png"></p>
 <p>As we can see the Customers have a large variation of duration_sec values than the Subscribers, in other hand the Subscribers have more outlier values than Customers.</p>
 <p>N.B:  simplify the comparison and the analysis of the results, I planned to create bins for distance, hire time and duration_sec. These bins are based on quartiles to get equal bins.</p>
 <h4 id="the-distance-traveled-for-each-time-quartile-bin">The distance traveled for each time quartile bin</h4>
-<p><img src="/img/portfolio/output_64_1.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_64_1.png" alt="png"></p>
 <p>As we can see the number of users who use the Lyft bikes for long time traveling more distance, but they are many users who use Lyft bikes for long period but didn&rsquo;t use it for long distance.</p>
 <h4 id="the-duration-passed-for-each-distance-quartile-bin">The duration passed for each distance quartile bin</h4>
-<p><img src="/img/portfolio/output_67_1.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_67_1.png" alt="png"></p>
 <p>As we can see they are many number of users who use the Lyft bikes for short distance traveling but use the bikes for long time. Also they are many users who use Lyft bikes for long distance but didn&rsquo;t use it for long time.</p>
 <h4 id="distribution-of-using-lyft-services-by-time-and-distance-in-months-and-week-days">Distribution of using Lyft services by time and distance in months and week days</h4>
-<p><img src="/img/portfolio/output_69_1.png" alt="png"></p>
-<p><img src="/img/portfolio/output_70_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_69_1.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_70_0.png" alt="png"></p>
 <p>There is no change in the behavior of Lyft bike service users in terms of time and distance of use throughout the months. There is a general tendency to use the service for short and medium duration and the same for distance. Note also that the use intensified in the month of October after an increase during the previous 4 months.</p>
 <p>Firstly, I wanted to know the use of Lyft bike service for each type of consumer, I found that Suscribers use these services more for long duration and long distance.</p>
 <p>Secondly, I found that the time of use and distances travelled are very varied for Customer consumers more than Subscriber consumers.</p>
@@ -172,13 +172,13 @@ In my case I convert some columns to readable and useful format of data, like da
 <!-- raw HTML omitted --></p>
 <h3 id="multivariate-exploration">Multivariate Exploration</h3>
 <h4 id="the-average-of-distance-traveled-in-each-time-quartile-bin-for-type-users">The average of distance traveled in each time quartile bin for type users</h4>
-<p><img src="/img/portfolio/output_75_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_75_0.png" alt="png"></p>
 <p>Subscribe consumers use the Lyft vélo services for a longer average distance and for a longer period of time than Customer consumers, which is in line with the results of the bivariate analysis.</p>
 <h4 id="the-average-of-duration-passed-in-each-distance-quartile-bin-for-type-users">The average of duration passed in each distance quartile bin for type users</h4>
-<p><img src="/img/portfolio/output_78_0.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_78_0.png" alt="png"></p>
 <p>We can notice that the Customer Consumers use the Lyft vélo services for a higher average duration and for a longer distance than the Subscriber Consumers.  This shows that Customer consumers use Lyft vélo services more efficiently and effectively than Subscriber consumers.</p>
 <h4 id="comparison-between-the-average-of-duration-of-each-user-type-by-distance">Comparison between the average of duration of each user type by distance</h4>
-<p><img src="/img/portfolio/output_81_2.png" alt="png"></p>
+<p><img src="https://pxotmane.github.io/Otmane-portfolio/img/portfolio/output_81_2.png" alt="png"></p>
 <p>As we have seen above, we notice in the line chart that Costumer consumers use the Lyft vélo service for a higher average duration than Subscriber consumers.</p>
 <p>In multi-variable visualization I found that Customers use Lyft bikes for a higher average time than Subscribers for long distances, which even shows that the number of Subscriber Consumers is higher than the number of Customer Consumers, but the latter use the bicycles for a higher average duration.</p>
 <p>The relationship noted above appeared difficult to in Univariate and Bivariate visualization, given that it is normal is a duration of use of Lyft bicycles services must be higher among Subscribers than Customers.</p>
